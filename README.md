@@ -1,14 +1,17 @@
-# Usage
+merge-github-fork - Automated git commands for merging forks
+============================================================
 
-> merge-github-fork https://github.com/someghname/somereponame.git
-
-## done manually ##
+## Done manually ##
 
 ```bash
 #clone someones repo
 git clone https://github.com/myghname/somereponame.git
 cd somereponame
 ```
+
+# Usage
+
+> merge-github-fork https://github.com/someghname/somereponame.git
 
 ## The script essentially does this: ##
 
