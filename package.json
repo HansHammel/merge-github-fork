@@ -1,0 +1,19 @@
+{
+  "name": "merge-github-fork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mergeGithubFork.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HansHammel/MergeGithubFork.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HansHammel/MergeGithubFork/issues"
+  },
+  "homepage": "https://github.com/HansHammel/MergeGithubFork#readme"
+}
