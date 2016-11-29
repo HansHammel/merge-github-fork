@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 /*
 Usage: node mergeGithubFork https://github.com/someghname/somereponame.git
 
