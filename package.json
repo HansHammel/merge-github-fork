@@ -2,7 +2,6 @@
   "name": "merge-github-fork",
   "version": "1.0.0",
   "description": "",
-  "main": "mergeGithubFork.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/HansHammel/MergeGithubFork/issues"
   },
-  "homepage": "https://github.com/HansHammel/MergeGithubFork#readme"
+  "homepage": "https://github.com/HansHammel/MergeGithubFork#readme",
+  "bin": {
+      "mege-github-fork": "mergeGithubFork.js"
+    }
 }
