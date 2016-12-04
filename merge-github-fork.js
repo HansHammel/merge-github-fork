@@ -17,7 +17,7 @@ git push
 */
 
 var s = process.argv[2] || process.exit(1);
-var regex = /^https:\/\/github\.com\/(.*)\/(.*)\.git$/
+var regex = /^https:\/\/github\.com\/(.*)\/(.*)\.git$/;
 var result = s.match(regex);
 var user = result[1];
 var repo = result[2];

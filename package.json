@@ -1,21 +1,35 @@
 {
   "name": "merge-github-fork",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HansHammel/MergeGithubFork.git"
+    "url": "git+https://github.com/HansHammel/merge-github-fork.git"
   },
-  "author": "",
-  "license": "MIT",
+  "description": "Automated git commands for merging foreign forks by url",
+  "author": {
+    "name": "Oliver Bleckmann",
+    "url": "https://github.com/HansHammel"
+  },
   "bugs": {
-    "url": "https://github.com/HansHammel/MergeGithubFork/issues"
+    "url": "https://github.com/HansHammel/merge-github-fork/issues"
   },
-  "homepage": "https://github.com/HansHammel/MergeGithubFork#readme",
+  "homepage": "https://github.com/HansHammel/merge-github-fork#readme",
   "bin": {
-      "merge-github-fork": "mergeGithubFork.js"
-    }
+      "merge-github-fork": "merge-github-fork.js"
+    },
+  "keywords": [
+  "merge",
+  "git",
+  "github",
+  "fork",
+  "brunche",
+    "auto",
+    "batch",
+    "autmatically",
+    "multiple"
+],
+  "license": "MIT"
 }
