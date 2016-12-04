@@ -3,6 +3,12 @@ merge-github-fork - Automated git commands for merging forks
 
 # Install
 
+```sh
+npm install merge-github-fork -g
+```
+
+or
+
 > npm install -g https://github.com/HansHammel/MergeGithubFork.git
 
 ## Done manually ##
