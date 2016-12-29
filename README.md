@@ -35,6 +35,10 @@ cd somereponame
 # Usage
 
 	merge-github-fork https://github.com/someghname/somereponame.git
+	
+or
+
+	mgf https://github.com/someghname/somereponame.git#branch
 
 Now (>=v1.1.0) supports urls like `owner/repo#branch` or `git://github.com/owner/repo.git#branch`
 
