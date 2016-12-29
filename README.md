@@ -46,11 +46,10 @@ Own server urls are not supported!
 
 ```bash
 #merge forkes by gh-url
-git remote add someghname https://github.com/someghname/somereponame.git#branch
+git remote add someghname https://github.com/someghname/somereponame.git#branch # no branch defaults to master
 git fetch someghname
 git checkout master
 git merge -s recursive -X ignore-all-space someghname/branch # while branch defaults to master
-git merge -s recursive -X ignore-all-space someghname/branch # for version >=2.0.0
 git status # if fails
 npm it # >=v2.0.0
 git push origin master
