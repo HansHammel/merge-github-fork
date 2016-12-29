@@ -78,3 +78,4 @@ git push origin master
 - [ ] add no push option
 - [ ] add no test option (for version >2)
 - [ ] color
+- [ ] target branch
