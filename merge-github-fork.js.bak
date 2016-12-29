@@ -84,7 +84,7 @@ exec('git remote add '+user+' '+s, (error, stdout, stderr) => {
 		    console.error(`${error}`);
 		    return;
 		  }
-		  //TODO test strategies: ours theirs renormalize patience ignore-space-at-eol ignore-space-change ignore-all-space ignore-blank-lines
+		  //TODO test strategies: renormalize patience ignore-space-at-eol ignore-space-change ignore-all-space ignore-blank-lines
 		  //exec('git merge '+user+'/'+branch, (error, stdout, stderr) => {
 		  exec('git merge -s recursive -X ignore-all-space '+user+'/'+branch, (error, stdout, stderr) => {
 			  process.stdout.write(stdout);
@@ -130,7 +130,7 @@ exec('git remote add '+user+' '+s, (error, stdout, stderr) => {
 			    return;
 			  }
 
-			/*
+			
 				exec('npm it', (error, stdout, stderr) => {
 			  process.stdout.write(stdout);
 			  process.stderr.write(stderr);
@@ -141,7 +141,6 @@ exec('git remote add '+user+' '+s, (error, stdout, stderr) => {
 			    console.error(`${error}`);
 			    return;
 			  }
-			  */
 			    
 				  exec('git push origin master', (error, stdout, stderr) => {
 					  process.stdout.write(stdout);
@@ -159,7 +158,7 @@ exec('git remote add '+user+' '+s, (error, stdout, stderr) => {
 			  
 			});
 		  
-	//	});
+		});
 	  
 	});
   
