@@ -1,7 +1,18 @@
 merge-github-fork - Automated git commands for merging forks
 ============================================================
 
+### *Breaking change! >= v2.0.0 runs npm install & npm test to ensure nothing is broken*
+
 # Install
+
+version 1.1.0 without `npm test`
+
+```sh
+npm install merge-github-fork@1.1.0 -g
+```
+
+or latest version running `npm test` to ensure nothing is broken after merge
+(obviously only for node projects that have a passing test suite!)
 
 ```sh
 npm install merge-github-fork -g
@@ -43,7 +54,10 @@ git remote add someghname https://github.com/someghname/somereponame.git#branch
 git fetch someghname
 git checkout master
 git merge -s recursive -X ignore-all-space someghname/branch # while branch defaults to master
-git status
+git merge --no-commit -s recursive -X ignore-all-space someghname/branch # for version >=2.0.0
+git status # if fails
+npm it # >=v2.0.0
+git commit --no-edit # >=v2.0.0
 git push origin master
 ```
 

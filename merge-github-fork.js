@@ -45,58 +45,58 @@ var repo = result[2];
 var os = require("os");
 var gh = require('parse-github-url');
 var r = gh(a);
-var s = 'https://github.com/'+r.repo+'.git'
+var s = 'https://github.com/' + r.repo + '.git'
 var user = r.owner;
 var repo = r.name;
 var branch = r.branch;
 
 const exec = require('child_process').exec;
 //const exec = spawn('cmd', ['/s', '/c', command],  { stdio: 'inherit' } );
-exec('git remote add '+user+' '+s, (error, stdout, stderr) => {
-  process.stdout.write(stdout);
-  process.stderr.write(stderr);
-  //console.log(`stdout: ${stdout}`);
-  //console.log(`stderr: ${stderr}`);
-  if (error) {
-  	console.log();
-    console.error(`${error}`);
-    return;
-  }
-  
-  exec('git fetch  '+user, (error, stdout, stderr) => {
-	  process.stdout.write(stdout);
-	  process.stderr.write(stderr);
-	  //console.log(`stdout: ${stdout}`);
-	  //console.log(`stderr: ${stderr}`);
-	  if (error) {
-	  	console.log();
-	    console.error(`${error}`);
-	    return;
-	  }
-  
-	  exec('git checkout master', (error, stdout, stderr) => {
-		  process.stdout.write(stdout);
-		  process.stderr.write(stderr);
-		  //console.log(`stdout: ${stdout}`);
-		  //console.log(`stderr: ${stderr}`);
-		  if (error) {
-		  	console.log();
-		    console.error(`${error}`);
-		    return;
-		  }
-		  //TODO test strategies: ours theirs renormalize patience ignore-space-at-eol ignore-space-change ignore-all-space ignore-blank-lines
-		  //exec('git merge '+user+'/'+branch, (error, stdout, stderr) => {
-		  exec('git merge -s recursive -X ignore-all-space '+user+'/'+branch, (error, stdout, stderr) => {
-			  process.stdout.write(stdout);
-			  process.stderr.write(stderr);
-			  //console.log(`stdout: ${stdout}`);
-			  //console.log(`stderr: ${stderr}`);		
-			  if (error) {
-			  	console.log();
-			    console.error(`${error}`);
-	    
-	    
-	    /*
+exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
+    process.stdout.write(stdout);
+    process.stderr.write(stderr);
+    //console.log(`stdout: ${stdout}`);
+    //console.log(`stderr: ${stderr}`);
+    if (error) {
+        console.log();
+        console.error(`${error}`);
+        return;
+    }
+
+    exec('git fetch  ' + user, (error, stdout, stderr) => {
+        process.stdout.write(stdout);
+        process.stderr.write(stderr);
+        //console.log(`stdout: ${stdout}`);
+        //console.log(`stderr: ${stderr}`);
+        if (error) {
+            console.log();
+            console.error(`${error}`);
+            return;
+        }
+
+        exec('git checkout master', (error, stdout, stderr) => {
+            process.stdout.write(stdout);
+            process.stderr.write(stderr);
+            //console.log(`stdout: ${stdout}`);
+            //console.log(`stderr: ${stderr}`);
+            if (error) {
+                console.log();
+                console.error(`${error}`);
+                return;
+            }
+            //TODO test strategies: ours theirs renormalize patience ignore-space-at-eol ignore-space-change ignore-all-space ignore-blank-lines
+            //exec('git merge '+user+'/'+branch, (error, stdout, stderr) => {
+            exec('git merge --no-commit -s recursive -X ignore-all-space ' + user + '/' + branch, (error, stdout, stderr) => {
+                process.stdout.write(stdout);
+                process.stderr.write(stderr);
+                //console.log(`stdout: ${stdout}`);
+                //console.log(`stderr: ${stderr}`);		
+                if (error) {
+                    console.log();
+                    console.error(`${error}`);
+
+
+                    /*
 	    		exec('git log --graph --oneline', (error, stdout, stderr) => {
 					  process.stdout.write(stdout);
 					  process.stderr.write(stderr);
@@ -109,58 +109,70 @@ exec('git remote add '+user+' '+s, (error, stdout, stderr) => {
 					  }
 					});
 					*/
-					  
-			    exec('git status', (error, stdout, stderr) => {
-					  process.stdout.write(stdout);
-					  process.stderr.write(stderr);
-					  //console.log(`stdout: ${stdout}`);
-					  //console.log(`stderr: ${stderr}`);
-					  if (error) {
-					  	console.log();
-					    console.error(`${error}`);
-					    return;
-					  }
-					  
-					  console.log();
-					  console.log('PS: (maybe) remove the remote repository');
-					  console.log('  (use "git remote rm '+user+'")');
-					
-					});
-					
-			    return;
-			  }
 
-			/*
-				exec('npm it', (error, stdout, stderr) => {
-			  process.stdout.write(stdout);
-			  process.stderr.write(stderr);
-			  //console.log(`stdout: ${stdout}`);
-			  //console.log(`stderr: ${stderr}`);
-			  if (error) {
-			  	console.log();
-			    console.error(`${error}`);
-			    return;
-			  }
-			  */
-			    
-				  exec('git push origin master', (error, stdout, stderr) => {
-					  process.stdout.write(stdout);
-					  process.stderr.write(stderr);
-					  //console.log(`stdout: ${stdout}`);
-					  //console.log(`stderr: ${stderr}`);
-					  if (error) {
-					  	console.log();
-					    console.error(`${error}`);
-					    return;
-					  }
-					});
-					
-			  });
-			  
-			});
-		  
-	//	});
-	  
-	});
-  
+                    exec('git status', (error, stdout, stderr) => {
+                        process.stdout.write(stdout);
+                        process.stderr.write(stderr);
+                        //console.log(`stdout: ${stdout}`);
+                        //console.log(`stderr: ${stderr}`);
+                        if (error) {
+                            console.log();
+                            console.error(`${error}`);
+                            return;
+                        }
+
+                        console.log();
+                        console.log('PS: (maybe) remove the remote repository');
+                        console.log('  (use "git remote rm ' + user + '")');
+
+                    });
+
+                    return;
+                }
+
+
+                exec('npm it', (error, stdout, stderr) => {
+                    process.stdout.write(stdout);
+                    process.stderr.write(stderr);
+                    //console.log(`stdout: ${stdout}`);
+                    //console.log(`stderr: ${stderr}`);
+                    if (error) {
+                        console.log();
+                        console.error(`${error}`);
+                        return;
+                    }
+
+                    exec('git commit --no-edit', (error, stdout, stderr) => {
+                        process.stdout.write(stdout);
+                        process.stderr.write(stderr);
+                        //console.log(`stdout: ${stdout}`);
+                        //console.log(`stderr: ${stderr}`);
+                        if (error) {
+                            console.log();
+                            console.error(`${error}`);
+                            return;
+                        }
+
+                        exec('git push origin master', (error, stdout, stderr) => {
+                            process.stdout.write(stdout);
+                            process.stderr.write(stderr);
+                            //console.log(`stdout: ${stdout}`);
+                            //console.log(`stderr: ${stderr}`);
+                            if (error) {
+                                console.log();
+                                console.error(`${error}`);
+                                return;
+                            }
+                        });
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    });
+
 });
