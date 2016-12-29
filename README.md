@@ -54,10 +54,9 @@ git remote add someghname https://github.com/someghname/somereponame.git#branch
 git fetch someghname
 git checkout master
 git merge -s recursive -X ignore-all-space someghname/branch # while branch defaults to master
-git merge --no-commit -s recursive -X ignore-all-space someghname/branch # for version >=2.0.0
+git merge -s recursive -X ignore-all-space someghname/branch # for version >=2.0.0
 git status # if fails
 npm it # >=v2.0.0
-git commit --no-edit # >=v2.0.0
 git push origin master
 ```
 

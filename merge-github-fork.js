@@ -60,6 +60,9 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
     if (error) {
         console.log();
         console.error(`${error}`);
+        console.log();
+        console.log('PS: (maybe) remove the remote repository');
+        console.log('  (use "git remote rm ' + user + '")');
         return;
     }
 
@@ -85,8 +88,9 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
                 return;
             }
             //TODO test strategies: ours theirs renormalize patience ignore-space-at-eol ignore-space-change ignore-all-space ignore-blank-lines
+            //TODO git merge --no-commit && git commit --no-edit
             //exec('git merge '+user+'/'+branch, (error, stdout, stderr) => {
-            exec('git merge --no-commit -s recursive -X ignore-all-space ' + user + '/' + branch, (error, stdout, stderr) => {
+            exec('git merge -s recursive -X ignore-all-space ' + user + '/' + branch, (error, stdout, stderr) => {
                 process.stdout.write(stdout);
                 process.stderr.write(stderr);
                 //console.log(`stdout: ${stdout}`);
@@ -130,9 +134,9 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
                     return;
                 }
 
-
+								console.log('running "npm install && npm test" (may take some time)');
                 exec('npm it', (error, stdout, stderr) => {
-                    process.stdout.write(stdout);
+                    //process.stdout.write(stdout);
                     process.stderr.write(stderr);
                     //console.log(`stdout: ${stdout}`);
                     //console.log(`stderr: ${stderr}`);
@@ -141,7 +145,8 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
                         console.error(`${error}`);
                         return;
                     }
-
+										//TODO git merge --no-commit && git commit --no-edit
+										/*
                     exec('git commit --no-edit', (error, stdout, stderr) => {
                         process.stdout.write(stdout);
                         process.stderr.write(stderr);
@@ -152,6 +157,7 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
                             console.error(`${error}`);
                             return;
                         }
+                        */
 
                         exec('git push origin master', (error, stdout, stderr) => {
                             process.stdout.write(stdout);
@@ -165,7 +171,7 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
                             }
                         });
 
-                    });
+                    //});
 
                 });
 
