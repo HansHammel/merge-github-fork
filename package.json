@@ -1,6 +1,6 @@
 {
   "name": "merge-github-fork",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,6 +34,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "parse-github-url": "^0.3.2"
+    "parse-github-url": "^1.0.0"
   }
 }
