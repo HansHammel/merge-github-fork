@@ -10,6 +10,8 @@ merge-github-fork - Automated git commands for merging forks
 [![npm download](https://img.shields.io/npm/dt/merge-github-fork.svg)](https://www.npmjs.com/package/merge-github-fork)
 [![Package Quality](http://npm.packagequality.com/shield/merge-github-fork.svg)](http://packagequality.com/#?package=merge-github-fork)
 [![Inline docs](http://inch-ci.org/github/HansHammel/merge-github-fork.svg?branch=master)](http://inch-ci.org/github/HansHammel/merge-github-fork)
+[![star this repo](http://githubbadges.com/star.svg?user=HansHammel&repo=merge-github-fork&style=flat&color=fff&background=007ec6)](https://github.com/HansHammel/merge-github-fork)
+[![fork this repo](http://githubbadges.com/fork.svg?user=HansHammel&repo=merge-github-fork&style=flat&color=fff&background=007ec6)](https://github.com/HansHammel/merge-github-fork/fork)
 
 [![david dependency](https://img.shields.io/david/HansHammel/merge-github-fork.svg)](https://david-dm.org/HansHammel/merge-github-fork)
 [![david devDependency](https://img.shields.io/david/dev/HansHammel/merge-github-fork.svg)](https://david-dm.org/HansHammel/merge-github-fork)
