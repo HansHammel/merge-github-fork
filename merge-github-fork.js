@@ -50,6 +50,8 @@ var user = r.owner;
 var repo = r.name;
 var branch = r.branch;
 
+//maybe add git remote update branch
+
 const exec = require('child_process').exec;
 //const exec = spawn('cmd', ['/s', '/c', command],  { stdio: 'inherit' } );
 exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
@@ -134,8 +136,8 @@ exec('git remote add ' + user + ' ' + s, (error, stdout, stderr) => {
                     return;
                 }
 
-								console.log('running "npm install && npm test" (may take some time)');
-                exec('npm it', (error, stdout, stderr) => {
+				console.log('running "npm install && npm test" (may take some time)');
+                exec('npm install && npm test', (error, stdout, stderr) => {
                     //process.stdout.write(stdout);
                     process.stderr.write(stderr);
                     //console.log(`stdout: ${stdout}`);
