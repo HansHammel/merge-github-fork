@@ -34,6 +34,14 @@ For local repositories, also supported by Git natively, the following syntaxes m
 file:///path/to/repo.git/
 */
 
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+
+updateNotifier({
+    pkg,
+    updateCheckInterval: 1000 * 60 * 60 * 24 * 7 // 1 week
+}).notify();
+
 var a = process.argv[2] || process.exit(1);
 /*
 var regex = /^https:\/\/github\.com\/(.*)\/(.*)\.git$/;

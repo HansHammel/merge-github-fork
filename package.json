@@ -1,6 +1,6 @@
 {
   "name": "merge-github-fork",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,10 @@
     "merge-github-fork": "merge-github-fork.js",
     "mgf": "merge-github-fork.js"
   },
+  "scripts": {
+    "start": "node merge-github-fork.js",
+	"test": "exit 0"
+  },
   "keywords": [
     "merge",
     "git",
@@ -34,6 +38,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "parse-github-url": "^1.0.0"
+    "parse-github-url": "^1.0.0",
+    "update-notifier": "^1.0.3"
   }
 }
