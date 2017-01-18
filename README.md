@@ -4,6 +4,7 @@ merge-github-fork - Automated git commands for merging forks
 [![NPM](https://nodei.co/npm/merge-github-fork.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/merge-github-fork/) 
 [![NPM](https://nodei.co/npm-dl/merge-github-fork.png?months=9&height=3)](https://nodei.co/npm/merge-github-fork/)
 
+[![tag:?](https://img.shields.io/github/tag/HansHammel/merge-github-fork.svg)](https://github.com/HansHammel/merge-github-fork/releases)
 [![npm version](https://img.shields.io/npm/v/merge-github-fork.svg)](https://www.npmjs.com/package/merge-github-fork)
 [![npm license](https://img.shields.io/npm/l/merge-github-fork.svg)](https://www.npmjs.com/package/merge-github-fork)
 [![npm download](https://img.shields.io/npm/dm/merge-github-fork.svg)](https://www.npmjs.com/package/merge-github-fork)
