@@ -18,7 +18,7 @@ merge-github-fork - Automated git commands for merging forks
 [![david optionalDependency](https://img.shields.io/david/optional/HansHammel/merge-github-fork.svg)](https://david-dm.org/HansHammel/merge-github-fork)
 [![david peerDependency](https://img.shields.io/david/peer/HansHammel/merge-github-fork.svg)](https://david-dm.org/HansHammel/merge-github-fork)
 [![npms score](https://badges.npms.io/merge-github-fork.svg)](https://www.npmjs.com/package/merge-github-fork)
-[![Known Vulnerabilities](https://snyk.io/test/github/HansHammel//merge-github-fork/badge.svg)](https://snyk.io/test/github/HansHammel//merge-github-fork)
+[![Known Vulnerabilities](https://snyk.io/test/github/HansHammel//merge-github-fork/badge.svg)](https://snyk.io/test/github/HansHammel//merge-github-fork) [![Greenkeeper badge](https://badges.greenkeeper.io/HansHammel/merge-github-fork.svg)](https://greenkeeper.io/)
 
 ### *Breaking change! >= v2.0.0 runs npm install & npm test to ensure nothing is broken*
 
