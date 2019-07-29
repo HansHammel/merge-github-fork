@@ -1,9 +1,6 @@
 {
   "name": "merge-github-fork",
   "version": "2.0.6",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HansHammel/merge-github-fork.git"
@@ -23,7 +20,7 @@
   },
   "scripts": {
     "start": "node merge-github-fork.js",
-	"test": "exit 0"
+    "test": "exit 0"
   },
   "keywords": [
     "merge",
